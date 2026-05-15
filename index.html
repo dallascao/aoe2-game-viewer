@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101214" />
+    <meta
+      name="description"
+      content="AOE2 game viewer is a Windows viewer for Age of Empires II: Definitive Edition recorded games and live spectating."
+    />
+    <meta property="og:title" content="AOE2 game viewer" />
+    <meta
+      property="og:description"
+      content="One-click AOE2 DE replay loading, live spectating, and caster stream discovery."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aoe2viewer.com" />
+    <meta property="og:image" content="https://aoe2viewer.com/images/aoe2_game_viewer_screenshot_2.png" />
+    <title>AOE2 game viewer</title>
+    <link rel="icon" href="icons/app-icon.ico" sizes="any" />
+    <link rel="icon" href="icons/app-icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icons/app-icon-256.png" />
+    <link rel="preload" href="styles.css" as="style" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skipLink">Skip to content</a>
+
+    <header class="site-header" aria-label="AOE2 game viewer">
+      <a class="brand" href="#top" aria-label="AOE2 game viewer">
+        <img class="brand-mark" src="icons/app-icon-64.png" alt="" aria-hidden="true" />
+        <span data-i18n="brand">AOE2 game viewer</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#features" data-i18n="nav.features">Features</a>
+        <a href="#sponsors" data-i18n="nav.sponsors">Sponsors</a>
+        <a href="https://downloads.aoe2viewer.com/releases/AOE2-game-viewer-1.0.0-x64-Setup.exe" data-i18n="nav.download">Download</a>
+      </nav>
+      <label class="language-control">
+        <span data-i18n="language.label">Language</span>
+        <select id="languageSelect" aria-label="Language"></select>
+      </label>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-media" aria-label="AOE2 game viewer screenshot">
+          <img
+            id="heroScreenshot"
+            src="images/localized/en/aoe2_game_viewer_screenshot_0.png"
+            alt="AOE2 game viewer live spectating screen"
+            data-i18n-attr="alt:hero.imageAlt"
+          />
+        </div>
+        <div class="hero-copy">
+          <h1 data-i18n="hero.title">Replay and spectate AOE2 matches with one click.</h1>
+          <p class="hero-lede" data-i18n="hero.lede">
+            Follow players, launch recent replays, and when there is an important match, spectate in-game or pick from a list of all caster streams covering it.
+          </p>
+          <div class="hero-actions" id="download">
+            <a
+              class="button primary"
+              href="https://downloads.aoe2viewer.com/releases/AOE2-game-viewer-1.0.0-x64-Setup.exe"
+              data-i18n="hero.download"
+            >
+              Download for Windows
+            </a>
+            <a class="button secondary" href="#features" data-i18n="hero.seeFeatures">See what it does</a>
+          </div>
+          <dl class="release-facts" aria-label="Release details">
+            <div>
+              <dt data-i18n="facts.versionLabel">Version</dt>
+              <dd>1.0.0</dd>
+            </div>
+            <div>
+              <dt data-i18n="facts.platformLabel">Platform</dt>
+              <dd data-i18n="facts.platformValue">Windows</dd>
+            </div>
+            <div>
+              <dt data-i18n="facts.gameLabel">Game</dt>
+              <dd data-i18n="facts.gameValue">Age of Empires II: DE</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="feature-band" id="features">        
+
+        <div class="feature-row">
+          <div class="feature-copy">
+            <span class="feature-number">01</span>
+            <h3 data-i18n="features.replay.title">Load recent replays instantly</h3>
+            <p data-i18n="features.replay.body">
+              Replay any player's recent games, including your own, with one click from a clear match history list. No searching, downloading, unzipping, copying, or guessing which recorded-game file to open.
+            </p>
+          </div>
+            <figure class="screenshot-frame">
+            <img
+              id="replayScreenshot"
+              src="images/localized/en/aoe2_game_viewer_screenshot_1.png"
+              alt="Recent matches replay list with one-click play buttons"
+              data-i18n-attr="alt:features.replay.alt"
+            />
+          </figure>
+        </div>
+
+        <div class="feature-row reverse">
+          <div class="feature-copy">
+            <span class="feature-number">02</span>
+            <h3 data-i18n="features.live.title">Spectate live games and find casters</h3>
+            <p data-i18n="features.live.body">
+              See when a followed player is in game, launch the live spectate link, or open live caster streams already covering the match.
+            </p>
+          </div>
+          <figure class="screenshot-frame">
+            <img
+              id="liveScreenshot"
+              src="images/localized/en/aoe2_game_viewer_screenshot_2.png"
+              alt="Live match status and caster streams"
+              data-i18n-attr="alt:features.live.alt"
+            />
+          </figure>
+        </div>
+
+      </section>
+
+      <section class="sponsor-band" id="sponsors">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="sponsors.eyebrow">Community support</p>
+          <h2 data-i18n="sponsors.title">Thank you to the players supporting AOE2 game viewer.</h2>
+        </div>
+        <div class="sponsor-panel">
+          <ul class="sponsor-list" id="sponsorList" aria-live="polite">
+            <li data-i18n="sponsors.loading">Loading sponsors...</li>
+          </ul>
+          <p class="sponsor-note" data-i18n="sponsors.note">
+            Sponsors are listed only when they opt in from the app.
+          </p>
+        </div>
+      </section>
+
+      <section class="download-band">
+        <div>
+          <p class="eyebrow" data-i18n="final.eyebrow">Ready to watch faster?</p>
+          <h2 data-i18n="final.title">Install AOE2 game viewer and open your next match from one screen.</h2>
+        </div>
+        <a
+          class="button primary"
+          href="https://downloads.aoe2viewer.com/releases/AOE2-game-viewer-1.0.0-x64-Setup.exe"
+          data-i18n="final.download"
+        >
+          Download installer
+        </a>
+      </section>
+    </main>
+  </body>
+</html>
