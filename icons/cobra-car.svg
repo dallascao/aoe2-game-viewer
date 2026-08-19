@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Cobra Car</title>
+  <desc id="desc">A red cheat-unit sports car with a cobra hood mark and medieval gold trim for AOE2 game viewer.</desc>
+  <defs>
+    <linearGradient id="bg" x1="104" y1="84" x2="925" y2="935" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#263139"/>
+      <stop offset="0.48" stop-color="#111619"/>
+      <stop offset="1" stop-color="#08090b"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="197" y1="199" x2="826" y2="823" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff1ad"/>
+      <stop offset="0.37" stop-color="#d9aa49"/>
+      <stop offset="0.73" stop-color="#8a561e"/>
+      <stop offset="1" stop-color="#ffe89f"/>
+    </linearGradient>
+    <linearGradient id="redPaint" x1="252" y1="339" x2="783" y2="677" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff6b5f"/>
+      <stop offset="0.45" stop-color="#c52d28"/>
+      <stop offset="1" stop-color="#691316"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="394" y1="314" x2="640" y2="506" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d9f6ff"/>
+      <stop offset="0.36" stop-color="#78bde9"/>
+      <stop offset="1" stop-color="#143a55"/>
+    </linearGradient>
+    <filter id="shadow" x="-25%" y="-25%" width="150%" height="160%">
+      <feDropShadow dx="0" dy="34" stdDeviation="30" flood-color="#000000" flood-opacity="0.52"/>
+    </filter>
+  </defs>
+  <rect width="1024" height="1024" rx="184" fill="url(#bg)"/>
+  <path d="M166 777c86 57 203 87 346 87s260-30 346-87" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="52" stroke-linecap="round"/>
+  <path d="M236 587c37-127 145-218 276-218s239 91 276 218l-276 185-276-185z" fill="url(#gold)" opacity="0.32"/>
+  <g filter="url(#shadow)">
+    <path d="M208 600h608l49 91c9 16-3 36-22 36H181c-19 0-31-20-22-36l49-91z" fill="url(#gold)"/>
+    <path d="M257 524c33-102 126-166 255-166s222 64 255 166l54 44c24 20 37 49 37 80v33H166v-33c0-31 13-60 37-80l54-44z" fill="url(#redPaint)"/>
+    <path d="M352 512c30-67 85-105 160-105s130 38 160 105H352z" fill="#11171b"/>
+    <path d="M386 494c25-43 67-66 126-66s101 23 126 66H386z" fill="url(#glass)"/>
+    <path d="M498 428v66M402 494h220" stroke="#0c1217" stroke-opacity="0.48" stroke-width="18" stroke-linecap="round"/>
+    <path d="M244 590c34-39 74-58 120-58h296c46 0 86 19 120 58H244z" fill="#ff8b7f" opacity="0.28"/>
+    <path d="M203 634h618v44H203z" fill="#0d1114" opacity="0.4"/>
+    <path d="M263 591h101c25 0 49 12 64 33l34 47H230l-18-34c12-29 29-46 51-46z" fill="#871d1e"/>
+    <path d="M660 591h101c22 0 39 17 51 46l-18 34H562l34-47c15-21 39-33 64-33z" fill="#871d1e"/>
+    <circle cx="308" cy="702" r="86" fill="#090b0d"/>
+    <circle cx="308" cy="702" r="48" fill="#2f363b"/>
+    <circle cx="308" cy="702" r="18" fill="#f7d878"/>
+    <circle cx="716" cy="702" r="86" fill="#090b0d"/>
+    <circle cx="716" cy="702" r="48" fill="#2f363b"/>
+    <circle cx="716" cy="702" r="18" fill="#f7d878"/>
+    <path d="M429 664h166" stroke="#fff0aa" stroke-width="24" stroke-linecap="round"/>
+    <path d="M484 560c21-14 35-14 56 0-14 19-14 38 0 57-20 15-36 15-56 0 14-19 14-38 0-57z" fill="#11171b"/>
+    <path d="M512 531c38 18 59 49 63 91-26-24-47-35-63-35s-37 11-63 35c4-42 25-73 63-91z" fill="#f9dd7d"/>
+    <path d="M469 584c25-8 39-19 43-33 4 14 18 25 43 33" fill="none" stroke="#5f1718" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M269 547h102M653 547h102" stroke="#fff1ad" stroke-opacity="0.56" stroke-width="28" stroke-linecap="round"/>
+    <path d="M239 642h84M701 642h84" stroke="#ffd979" stroke-width="26" stroke-linecap="round"/>
+  </g>
+  <path d="M253 800h518" stroke="#fff0aa" stroke-opacity="0.52" stroke-width="34" stroke-linecap="round"/>
+  <path d="M342 298h340" stroke="#ffffff" stroke-opacity="0.12" stroke-width="18" stroke-linecap="round"/>
+</svg>

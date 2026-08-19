@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJL5Q8MERR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-YJL5Q8MERR');
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101214" />
+    <meta
+      name="description"
+      content="Recent AOE2 game viewer releases, feature updates, and fixes."
+    />
+    <link rel="canonical" href="https://aoe2viewer.com/updates/" />
+    <link rel="alternate" hreflang="en" href="https://aoe2viewer.com/updates/" />
+    <link rel="alternate" hreflang="pt" href="https://aoe2viewer.com/updates/?lang=pt" />
+    <link rel="alternate" hreflang="de" href="https://aoe2viewer.com/updates/?lang=de" />
+    <link rel="alternate" hreflang="es" href="https://aoe2viewer.com/updates/?lang=es" />
+    <link rel="alternate" hreflang="fr" href="https://aoe2viewer.com/updates/?lang=fr" />
+    <link rel="alternate" hreflang="hi" href="https://aoe2viewer.com/updates/?lang=hi" />
+    <link rel="alternate" hreflang="it" href="https://aoe2viewer.com/updates/?lang=it" />
+    <link rel="alternate" hreflang="ja" href="https://aoe2viewer.com/updates/?lang=ja" />
+    <link rel="alternate" hreflang="ko" href="https://aoe2viewer.com/updates/?lang=ko" />
+    <link rel="alternate" hreflang="ms" href="https://aoe2viewer.com/updates/?lang=ms" />
+    <link rel="alternate" hreflang="ru" href="https://aoe2viewer.com/updates/?lang=ru" />
+    <link rel="alternate" hreflang="tr" href="https://aoe2viewer.com/updates/?lang=tr" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://aoe2viewer.com/updates/?lang=zh-Hant" />
+    <link rel="alternate" hreflang="vi" href="https://aoe2viewer.com/updates/?lang=vi" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://aoe2viewer.com/updates/?lang=zh-Hans" />
+    <link rel="alternate" hreflang="pl" href="https://aoe2viewer.com/updates/?lang=pl" />
+    <link rel="alternate" hreflang="x-default" href="https://aoe2viewer.com/updates/" />
+    <meta property="og:title" content="AOE2 game viewer updates" />
+    <meta
+      property="og:description"
+      content="See what changed in the latest AOE2 game viewer release."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aoe2viewer.com/updates/" />
+    <meta property="og:image" content="https://aoe2viewer.com/icons/app-icon-256.png" />
+    <title>AOE2 game viewer updates</title>
+    <link rel="icon" href="../icons/app-icon.ico" sizes="any" />
+    <link rel="icon" href="../icons/app-icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../icons/app-icon-256.png" />
+    <link rel="preload" href="../styles.css" as="style" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script defer src="../app.js?v=2.3.1"></script>
+  </head>
+  <body data-i18n-title="updates.pageTitle">
+    <a class="skip-link" href="#main" data-i18n="skipLink">Skip to content</a>
+
+    <header class="site-header" aria-label="AOE2 game viewer">
+      <a class="brand" href="/" aria-label="AOE2 game viewer">
+        <img class="brand-mark" src="/icons/app-icon-64.png" alt="" aria-hidden="true" />
+        <span data-i18n="brand">AOE2 game viewer</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="/" data-i18n="nav.replaySearch">Replay search</a>
+        <a href="/players/" data-i18n="nav.players">Players</a>
+        <a href="/civilizations/" data-i18n="nav.civilizations">Civilizations</a>
+        <a href="/maps/" data-i18n="nav.maps">Maps</a>
+        <a href="/strategies/" data-i18n="nav.strategies">Strategies</a>
+        <a href="/app/" data-i18n="nav.app">App</a>
+      </nav>
+      <label class="language-control">
+        <span data-i18n="language.label">Language</span>
+        <select id="languageSelect" aria-label="Language"></select>
+      </label>
+    </header>
+
+    <main id="main" class="updates-main">
+      <aside class="database-notice" data-i18n-html="site.databaseNoticeHtml">Download the <a href="https://aoe2viewer.com/app/">AOE2 viewer app</a> to enjoy the <a href="https://aoe2viewer.com/app/#load-recent-replays-instantly">one-click replay launch</a> and the <a href="https://aoe2viewer.com/app/#aoe2-spy">AOE2 spy</a> feature that shows your opponent's strategies in live games!</aside>
+      <section class="updates-shell">
+        <div class="updates-header">
+          <p class="eyebrow" data-i18n="updates.eyebrow">Product updates</p>
+          <h1 data-i18n="updates.title">Updates</h1>
+          <p data-i18n="updates.intro">
+            Track what shipped in AOE2 game viewer and scan the latest release notes from one page.
+          </p>
+        </div>
+
+        <div class="updates-layout">
+          <aside class="updates-toc" aria-labelledby="updatesTocTitle">
+            <div class="updates-toc-card">
+              <p class="updates-toc-title" id="updatesTocTitle" data-i18n="updates.tocTitle">Table of contents</p>
+              <nav class="updates-toc-nav" aria-label="Updates table of contents">
+                <a href="#release-2-7-0">
+                  <span class="updates-toc-label" data-i18n="updates.toc.release270">Version 2.7.0</span>
+                  <span class="updates-toc-meta" data-i18n="updates.release270.date">July 25, 2026</span>
+                </a>
+                <a href="#release-2-6-1">
+                  <span class="updates-toc-label" data-i18n="updates.toc.release261">Version 2.6.1</span>
+                  <span class="updates-toc-meta" data-i18n="updates.release261.date">June 30, 2026</span>
+                </a>
+                <a href="#release-2-5-1">
+                  <span class="updates-toc-label" data-i18n="updates.toc.release251">Version 2.5.1</span>
+                  <span class="updates-toc-meta" data-i18n="updates.release251.date">June 24, 2026</span>
+                </a>
+                <a href="#release-2-3-1">
+                  <span class="updates-toc-label" data-i18n="updates.toc.release231">Version 2.3.1</span>
+                  <span class="updates-toc-meta" data-i18n="updates.release231.date">June 11, 2026</span>
+                </a>
+                <a href="#release-2-2-0">
+                  <span class="updates-toc-label" data-i18n="updates.toc.release220">Version 2.2.0</span>
+                  <span class="updates-toc-meta" data-i18n="updates.release220.date">June 6, 2026</span>
+                </a>
+                <a href="#release-2-1-0">
+                  <span class="updates-toc-label" data-i18n="updates.toc.release210">Version 2.1.0</span>
+                  <span class="updates-toc-meta" data-i18n="updates.release210.date">June 4, 2026</span>
+                </a>
+                <a href="#release-2-0-0">
+                  <span class="updates-toc-label" data-i18n="updates.toc.release200">Version 2.0.0</span>
+                  <span class="updates-toc-meta" data-i18n="updates.release200.date">June 2, 2026</span>
+                </a>
+                <a href="#release-1-3-2">
+                  <span class="updates-toc-label" data-i18n="updates.toc.release132">Version 1.3.2</span>
+                  <span class="updates-toc-meta" data-i18n="updates.release132.date">May 29, 2026</span>
+                </a>
+              </nav>
+            </div>
+          </aside>
+
+          <div class="updates-content">
+            <article class="update-card" id="release-2-7-0" aria-labelledby="release270Title">
+              <p class="update-version" data-i18n="updates.release270.version">Version 2.7.0</p>
+              <h2 id="release270Title" data-i18n="updates.release270.heading">Release 2.7.0</h2>
+              <p class="update-date" data-i18n="updates.release270.date">July 25, 2026</p>
+              <p class="update-summary" data-i18n="updates.release270.summary">
+                This release expands the AOE2 Spy overlay for live team games with more player information.
+              </p>
+              <div class="update-body" data-i18n-html="updates.release270.bodyHtml"></div>
+              <div class="update-actions">
+                <a class="button secondary" href="../index.html" data-i18n="updates.backHome">Back to home</a>
+              </div>
+            </article>
+
+            <article class="update-card" id="release-2-6-1" aria-labelledby="release261Title">
+              <p class="update-version" data-i18n="updates.release261.version">Version 2.6.1</p>
+              <h2 id="release261Title" data-i18n="updates.release261.heading">Release 2.6.1</h2>
+              <p class="update-date" data-i18n="updates.release261.date">June 30, 2026</p>
+              <p class="update-summary" data-i18n="updates.release261.summary">
+                This release adds AOE2 Spy for live game overlays and followup strategies.
+              </p>
+              <div class="update-body" data-i18n-html="updates.release261.bodyHtml"></div>
+              <div class="update-actions">
+                <a class="button secondary" href="../index.html" data-i18n="updates.backHome">Back to home</a>
+              </div>
+            </article>
+
+            <article class="update-card" id="release-2-5-1" aria-labelledby="release251Title">
+              <p class="update-version" data-i18n="updates.release251.version">Version 2.5.1</p>
+              <h2 id="release251Title" data-i18n="updates.release251.heading">Release 2.5.1</h2>
+              <p class="update-date" data-i18n="updates.release251.date">June 24, 2026</p>
+              <p class="update-summary" data-i18n="updates.release251.summary">
+                This release adds strategy filters to Custom Search and Custom Follow, detects opening strategies, and makes game history refresh more robust.
+              </p>
+              <div class="update-body" data-i18n-html="updates.release251.bodyHtml"></div>
+              <div class="update-actions">
+                <a class="button secondary" href="../index.html" data-i18n="updates.backHome">Back to home</a>
+              </div>
+            </article>
+
+            <article class="update-card" id="release-2-3-1" aria-labelledby="release231Title">
+              <p class="update-version" data-i18n="updates.release231.version">Version 2.3.1</p>
+              <h2 id="release231Title" data-i18n="updates.release231.heading">Release 2.3.1</h2>
+              <p class="update-date" data-i18n="updates.release231.date">June 11, 2026</p>
+              <p class="update-summary" data-i18n="updates.release231.summary">
+                This release adds many more filters to Custom Search and Custom Follow, returns more follow results, and improves sharing and recorded-game playback.
+              </p>
+              <div class="update-body" data-i18n-html="updates.release231.bodyHtml"></div>
+              <div class="update-actions">
+                <a class="button secondary" href="../index.html" data-i18n="updates.backHome">Back to home</a>
+              </div>
+            </article>
+
+            <article class="update-card" id="release-2-2-0" aria-labelledby="release220Title">
+              <p class="update-version" data-i18n="updates.release220.version">Version 2.2.0</p>
+              <h2 id="release220Title" data-i18n="updates.release220.heading">Release 2.2.0</h2>
+              <p class="update-date" data-i18n="updates.release220.date">June 6, 2026</p>
+              <p class="update-summary" data-i18n="updates.release220.summary">
+                This release adds Recent Games links across follow cards, clickable player names, and local database results in Custom Search.
+              </p>
+              <div class="update-body" data-i18n-html="updates.release220.bodyHtml"></div>
+              <div class="update-actions">
+                <a class="button secondary" href="../index.html" data-i18n="updates.backHome">Back to home</a>
+              </div>
+            </article>
+
+            <article class="update-card" id="release-2-1-0" aria-labelledby="release210Title">
+              <p class="update-version" data-i18n="updates.release210.version">Version 2.1.0</p>
+              <h2 id="release210Title" data-i18n="updates.release210.heading">Release 2.1.0</h2>
+              <p class="update-date" data-i18n="updates.release210.date">June 4, 2026</p>
+              <p class="update-summary" data-i18n="updates.release210.summary">
+                This release adds custom follows and custom search for games by selected maps, players, or civs.
+              </p>
+              <div class="update-body" data-i18n-html="updates.release210.bodyHtml"></div>
+              <div class="update-actions">
+                <a class="button secondary" href="../index.html" data-i18n="updates.backHome">Back to home</a>
+              </div>
+            </article>
+
+            <article class="update-card" id="release-2-0-0" aria-labelledby="release200Title">
+              <p class="update-version" data-i18n="updates.release200.version">Version 2.0.0</p>
+              <h2 id="release200Title" data-i18n="updates.release200.heading">Release 2.0.0</h2>
+              <p class="update-date" data-i18n="updates.release200.date">June 2, 2026</p>
+              <p class="update-summary" data-i18n="updates.release200.summary">
+                This release adds Paste 'n Play, easier game sharing with friends, and a local save games manager.
+              </p>
+              <div class="update-body" data-i18n-html="updates.release200.bodyHtml"></div>
+              <div class="update-actions">
+                <a class="button secondary" href="../index.html" data-i18n="updates.backHome">Back to home</a>
+              </div>
+            </article>
+
+            <article class="update-card" id="release-1-3-2" aria-labelledby="release132Title">
+              <p class="update-version" data-i18n="updates.release132.version">Version 1.3.2</p>
+              <h2 id="release132Title" data-i18n="updates.release132.heading">Release 1.3.2</h2>
+              <p class="update-date" data-i18n="updates.release132.date">May 29, 2026</p>
+              <p class="update-summary" data-i18n="updates.release132.summary">
+                This release adds more ways to follow the games you care about, gives you control over local cache cleanup, and fixes a refresh bug that could break clicks.
+              </p>
+              <div class="update-body" data-i18n-html="updates.release132.bodyHtml"></div>
+              <div class="update-actions">
+                <a class="button secondary" href="../index.html" data-i18n="updates.backHome">Back to home</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <section class="footer-block" aria-labelledby="footerCommunityTitle">
+          <p class="footer-title" id="footerCommunityTitle" data-i18n="footer.community">Community</p>
+          <div class="footer-links">
+            <a href="https://discord.gg/YjW9tz4tty" target="_blank" rel="noreferrer" data-i18n="footer.discord">Discord</a>
+            <a href="https://github.com/dallascao/aoe2-game-viewer" target="_blank" rel="noreferrer" data-i18n="footer.github">GitHub</a>
+          </div>
+        </section>
+
+        <section class="footer-block" aria-labelledby="footerSourcesTitle">
+          <p class="footer-title" id="footerSourcesTitle" data-i18n="footer.sources">Data sources</p>
+          <div class="footer-links">
+            <a href="https://www.ageofempires.com/stats/ageii/" target="_blank" rel="noreferrer" data-i18n="footer.ageStats">Age of Empires stats</a>
+            <a href="https://aoe2recs.com/" target="_blank" rel="noreferrer" data-i18n="footer.aoe2recs">aoe2recs live feed</a>
+            <a href="https://www.aoe2companion.com/" target="_blank" rel="noreferrer" data-i18n="footer.aoe2Companion">AOE2 Companion</a>
+            <a href="https://aoe-elo.com/" target="_blank" rel="noreferrer" data-i18n="footer.aoeElo">AOE Elo ratings</a>
+            <a href="https://liquipedia.net/ageofempires/Main_Page" target="_blank" rel="noreferrer" data-i18n="footer.liquipedia">Liquipedia Age of Empires</a>
+          </div>
+        </section>
+      </div>
+      <div class="footer-meta">
+        <a class="footer-legal-link" href="../privacy.html" data-i18n="footer.privacy">Privacy policy</a>
+        <nav class="footer-language-links" aria-label="Language" data-language-crawl-links>
+          <a href="/updates/" hreflang="en" lang="en">English</a>
+          <a href="/updates/?lang=pt" hreflang="pt" lang="pt">Português</a>
+          <a href="/updates/?lang=de" hreflang="de" lang="de">Deutsch</a>
+          <a href="/updates/?lang=es" hreflang="es" lang="es">Español</a>
+          <a href="/updates/?lang=fr" hreflang="fr" lang="fr">Français</a>
+          <a href="/updates/?lang=hi" hreflang="hi" lang="hi">हिन्दी</a>
+          <a href="/updates/?lang=it" hreflang="it" lang="it">Italiano</a>
+          <a href="/updates/?lang=ja" hreflang="ja" lang="ja">日本語</a>
+          <a href="/updates/?lang=ko" hreflang="ko" lang="ko">한국어</a>
+          <a href="/updates/?lang=ms" hreflang="ms" lang="ms">Bahasa Melayu</a>
+          <a href="/updates/?lang=ru" hreflang="ru" lang="ru">Русский</a>
+          <a href="/updates/?lang=tr" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/updates/?lang=zh-Hant" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+          <a href="/updates/?lang=vi" hreflang="vi" lang="vi">Tiếng Việt</a>
+          <a href="/updates/?lang=zh-Hans" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+          <a href="/updates/?lang=pl" hreflang="pl" lang="pl">Polski</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
+

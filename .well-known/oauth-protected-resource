@@ -1,0 +1,9 @@
+{
+  "resource": "https://aoe2viewer.com/api",
+  "authorization_servers": [],
+  "scopes_supported": [],
+  "bearer_methods_supported": ["header"],
+  "resource_documentation": "https://aoe2viewer.com/docs/api.md",
+  "service_desc": "https://aoe2viewer.com/openapi.json",
+  "registration_policy": "No OAuth access token is required for the public replay search API."
+}

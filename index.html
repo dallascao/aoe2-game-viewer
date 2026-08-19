@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJL5Q8MERR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-YJL5Q8MERR');
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101214" />
+    <meta
+      name="description"
+      content="Search Age of Empires II: Definitive Edition replays by strategy, matchup, map, and player. Launch replays from your browser with one click, and view opponents’ Elo and past strategies in live games."
+    />
+    <link rel="canonical" href="https://aoe2viewer.com/" />
+    <link rel="alternate" hreflang="en" href="https://aoe2viewer.com/" />
+    <link rel="alternate" hreflang="pt" href="https://aoe2viewer.com/?lang=pt" />
+    <link rel="alternate" hreflang="de" href="https://aoe2viewer.com/?lang=de" />
+    <link rel="alternate" hreflang="es" href="https://aoe2viewer.com/?lang=es" />
+    <link rel="alternate" hreflang="fr" href="https://aoe2viewer.com/?lang=fr" />
+    <link rel="alternate" hreflang="hi" href="https://aoe2viewer.com/?lang=hi" />
+    <link rel="alternate" hreflang="it" href="https://aoe2viewer.com/?lang=it" />
+    <link rel="alternate" hreflang="ja" href="https://aoe2viewer.com/?lang=ja" />
+    <link rel="alternate" hreflang="ko" href="https://aoe2viewer.com/?lang=ko" />
+    <link rel="alternate" hreflang="ms" href="https://aoe2viewer.com/?lang=ms" />
+    <link rel="alternate" hreflang="ru" href="https://aoe2viewer.com/?lang=ru" />
+    <link rel="alternate" hreflang="tr" href="https://aoe2viewer.com/?lang=tr" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://aoe2viewer.com/?lang=zh-Hant" />
+    <link rel="alternate" hreflang="vi" href="https://aoe2viewer.com/?lang=vi" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://aoe2viewer.com/?lang=zh-Hans" />
+    <link rel="alternate" hreflang="pl" href="https://aoe2viewer.com/?lang=pl" />
+    <link rel="alternate" hreflang="x-default" href="https://aoe2viewer.com/" />
+    <meta property="og:title" content="AOE2 replay search" />
+    <meta
+      property="og:description"
+      content="Search Age of Empires II: Definitive Edition replays by strategy, matchup, map, and player. Launch replays from your browser with one click, and view opponents’ Elo and past strategies in live games."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aoe2viewer.com" />
+    <meta property="og:image" content="https://aoe2viewer.com/images/aoe2_game_viewer_screenshot_2.png" />
+    <title>AOE2 replay search</title>
+    <link rel="icon" href="/icons/app-icon.ico" sizes="any" />
+    <link rel="icon" href="/icons/app-icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icons/app-icon-256.png" />
+    <link rel="preload" href="/styles.css" as="style" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script defer src="/app.js"></script>
+  </head>
+  <body data-page="replay-search" data-i18n-title="replaySearch.pageTitle">
+    <a class="skip-link" href="#main" data-i18n="skipLink">Skip to content</a>
+
+    <header class="site-header" aria-label="AOE2 game viewer">
+      <a class="brand" href="/" aria-label="AOE2 game viewer">
+        <img class="brand-mark" src="/icons/app-icon-64.png" alt="" aria-hidden="true" />
+        <span data-i18n="brand">AOE2 game viewer</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="/" data-i18n="nav.replaySearch" aria-current="page">Replay search</a>
+        <a href="/players/" data-i18n="nav.players">Players</a>
+        <a href="/civilizations/" data-i18n="nav.civilizations">Civilizations</a>
+        <a href="/maps/" data-i18n="nav.maps">Maps</a>
+        <a href="/strategies/" data-i18n="nav.strategies">Strategies</a>
+        <a href="/followups/" data-i18n="nav.followups">Followups</a>
+        <a href="/app/" data-i18n="nav.app">App</a>
+      </nav>
+      <label class="language-control">
+        <span data-i18n="language.label">Language</span>
+        <select id="languageSelect" aria-label="Language"></select>
+      </label>
+    </header>
+
+    <main id="main" class="replay-search-main">
+      <section class="replay-search-hero" aria-labelledby="replaySearchTitle">
+        <div class="replay-search-heading">
+          <h1 id="replaySearchTitle" data-i18n="replaySearch.title">Find Age of Empires 2 Definitive Edition replays and launch them instantly.</h1>
+          <p data-i18n="replaySearch.lead">
+            Meet the most advanced replay search engine we have long been waiting for: search by any filter: player rating, game type, map, civilization, or even allow cheat settings. how do you turn this on <img class="cobra-car-icon" src="/icons/cobra-car.svg" alt="AOE2 Cobra Car icon" /> No login required.
+          </p>
+          <p class="replay-install-callout" data-i18n-html="replaySearch.installCallout">
+            Download the <a href="https://aoe2viewer.com/app/">AOE2 viewer app</a> to enjoy the <a href="https://aoe2viewer.com/app/#load-recent-replays-instantly">one-click replay launch</a> and the <a href="https://aoe2viewer.com/app/#aoe2-spy">AOE2 spy</a> feature that shows your opponent's strategies in live games!
+          </p>
+        </div>
+
+        <div class="replay-search-forms">
+          <section class="replay-search-panel" aria-labelledby="replaySearchFormTitle">
+            <div class="replay-search-panel-heading">
+              <h2 id="replaySearchFormTitle" data-i18n="replaySearch.formTitle">Replay search</h2>
+              <button class="button secondary compact" type="button" data-action="show-favorites">
+                <span data-i18n="replaySearch.favorites">Favorites</span>
+                <span class="favorite-count" id="favoriteCount">0</span>
+              </button>
+            </div>
+            <form id="replaySearchForm" class="replay-search-form" autocomplete="off">
+              <label class="search-field">
+                <span data-i18n="replaySearch.elo">Elo</span>
+                <select name="ratingRange" data-option-source="ratingRanges">
+                  <option value="any" data-i18n="replaySearch.any" selected>Any</option>
+                  <option value="1700-4000">1700-4000</option>
+                  <option value="1400-1700">1400-1700</option>
+                  <option value="1300-1400">1300-1400</option>
+                  <option value="1200-1300">1200-1300</option>
+                  <option value="1100-1200">1100-1200</option>
+                  <option value="900-1000">900-1000</option>
+                  <option value="700-900">700-900</option>
+                  <option value="400-700">400-700</option>
+                  <option value="0-400">0-400</option>
+                </select>
+              </label>
+              <label class="search-field">
+                <span data-i18n="replaySearch.playerA">Player A</span>
+                <input name="playerA" list="replayPlayerOptions" data-player-input placeholder="VIT | Hera" />
+              </label>
+              <label class="search-field">
+                <span data-i18n="replaySearch.playerB">Player B</span>
+                <input name="playerB" list="replayPlayerOptions" data-player-input placeholder="TAG_Sitaux" />
+              </label>
+              <datalist id="replayPlayerOptions"></datalist>
+              <label class="search-field">
+                <span data-i18n="replaySearch.civilizationA">Civ A</span>
+                <select name="civA" data-option-source="civilizations">
+                  <option value="" data-i18n="replaySearch.any">Any</option>
+                </select>
+              </label>
+              <label class="search-field">
+                <span data-i18n="replaySearch.civilizationB">Civ B</span>
+                <select name="civB" data-option-source="civilizations">
+                  <option value="" data-i18n="replaySearch.any">Any</option>
+                </select>
+              </label>
+              <label class="search-field">
+                <span data-i18n="replaySearch.leaderboard">Leaderboard</span>
+                <select name="leaderboard" data-option-source="leaderboard">
+                  <option value="" data-i18n="replaySearch.any">Any</option>
+                </select>
+              </label>
+              <label class="search-field">
+                <span data-i18n="replaySearch.map">Map</span>
+                <select name="map" data-option-source="map">
+                  <option value="" data-i18n="replaySearch.any">Any</option>
+                </select>
+              </label>
+              <label class="search-field">
+                <span data-i18n="replaySearch.gameMode">Game mode</span>
+                <select name="gameMode" data-option-source="gameMode">
+                  <option value="" data-i18n="replaySearch.any">Any</option>
+                </select>
+              </label>
+              <label class="search-field">
+                <span data-i18n="replaySearch.length">Length</span>
+                <select name="lengthRange">
+                  <option value="any" data-i18n="replaySearch.any" selected>Any</option>
+                  <option value="00:00:00-00:15:00">00:00:00-00:15:00</option>
+                  <option value="00:15:00-00:30:00">00:15:00-00:30:00</option>
+                  <option value="00:30:00-00:45:00">00:30:00-00:45:00</option>
+                  <option value="00:45:00-01:00:00">00:45:00-01:00:00</option>
+                  <option value="01:00:00-01:30:00">01:00:00-01:30:00</option>
+                  <option value="01:30:00-02:00:00">01:30:00-02:00:00</option>
+                  <option value="02:00:00-03:00:00">02:00:00-03:00:00</option>
+                  <option value="03:00:00-10:00:00">03:00:00-10:00:00</option>
+                </select>
+              </label>
+              <label class="search-field">
+                <span data-i18n="replaySearch.strategy">Strategy</span>
+                <select name="strategy" data-option-source="strategy">
+                  <option value="" data-i18n="replaySearch.any">Any</option>
+                </select>
+              </label>
+              <label class="search-field">
+                <span data-i18n="replaySearch.followup">Followup</span>
+                <select name="followup" data-option-source="followup">
+                  <option value="" data-i18n="replaySearch.any">Any</option>
+                </select>
+              </label>
+              <div class="replay-more-row">
+                <button
+                  id="moreFiltersToggle"
+                  class="replay-more-toggle"
+                  type="button"
+                  data-action="toggle-more-filters"
+                  aria-expanded="false"
+                  aria-controls="moreFiltersPanel"
+                  data-i18n="replaySearch.moreFilters"
+                >
+                  More filters
+                </button>
+              </div>
+              <div id="moreFiltersPanel" class="replay-more-filters" hidden>
+                <label class="search-field">
+                  <span data-i18n="replaySearch.aiPlayer">AI players</span>
+                  <select name="aiPlayer" data-default-value="any">
+                    <option value="any" data-i18n="replaySearch.any" selected>Any</option>
+                    <option value="0" data-i18n="option.boolean.no">No</option>
+                    <option value="1" data-i18n="option.boolean.yes">Yes</option>
+                  </select>
+                </label>
+                <label class="search-field">
+                  <span data-i18n="replaySearch.difficulty">Difficulty</span>
+                  <select name="difficulty" data-option-source="difficulty" data-default-value="any">
+                    <option value="any" data-i18n="replaySearch.any" selected>Any</option>
+                    <option value="standard">Standard</option>
+                  </select>
+                </label>
+                <label class="search-field">
+                  <span data-i18n="replaySearch.startingAge">Starting age</span>
+                  <select name="startingAge" data-option-source="startingAge" data-default-value="any">
+                    <option value="any" data-i18n="replaySearch.any" selected>Any</option>
+                    <option value="dark_age">Dark Age</option>
+                  </select>
+                </label>
+                <label class="search-field">
+                  <span data-i18n="replaySearch.endingAge">Ending age</span>
+                  <select name="endingAge" data-option-source="endingAge" data-default-value="any">
+                    <option value="any" data-i18n="replaySearch.any" selected>Any</option>
+                    <option value="imperial_age">Imperial Age</option>
+                  </select>
+                </label>
+                <label class="search-field">
+                  <span data-i18n="replaySearch.fullTechTree">Full tech tree</span>
+                  <select name="fullTechTree" data-default-value="any">
+                    <option value="any" data-i18n="replaySearch.any" selected>Any</option>
+                    <option value="0" data-i18n="option.boolean.no">No</option>
+                    <option value="1" data-i18n="option.boolean.yes">Yes</option>
+                  </select>
+                </label>
+                <label class="search-field">
+                  <span data-i18n="replaySearch.allowCheats">Allow cheats</span>
+                  <select name="allowCheats" data-default-value="any">
+                    <option value="any" data-i18n="replaySearch.any" selected>Any</option>
+                    <option value="0" data-i18n="option.boolean.no">No</option>
+                    <option value="1" data-i18n="option.boolean.yes">Yes</option>
+                  </select>
+                </label>
+                <label class="search-field">
+                  <span data-i18n="replaySearch.lockTeams">Lock teams</span>
+                  <select name="lockTeams" data-default-value="any">
+                    <option value="any" data-i18n="replaySearch.any" selected>Any</option>
+                    <option value="0" data-i18n="option.boolean.no">No</option>
+                    <option value="1" data-i18n="option.boolean.yes">Yes</option>
+                  </select>
+                </label>
+                <label class="search-field">
+                  <span data-i18n="replaySearch.population">Population</span>
+                  <select name="population" data-option-source="population" data-default-value="any">
+                    <option value="any" data-i18n="replaySearch.any" selected>Any</option>
+                    <option value="200">200</option>
+                  </select>
+                </label>
+                <label class="search-field">
+                  <span data-i18n="replaySearch.resources">Resources</span>
+                  <select name="resources" data-option-source="resources" data-default-value="any">
+                    <option value="any" data-i18n="replaySearch.any" selected>Any</option>
+                    <option value="standard">Standard</option>
+                  </select>
+                </label>
+                <label class="search-field">
+                  <span data-i18n="replaySearch.teamTogether">Team together</span>
+                  <select name="teamTogether" data-default-value="any">
+                    <option value="any" data-i18n="replaySearch.any" selected>Any</option>
+                    <option value="0" data-i18n="option.boolean.no">No</option>
+                    <option value="1" data-i18n="option.boolean.yes">Yes</option>
+                  </select>
+                </label>
+                <label class="search-field">
+                  <span data-i18n="replaySearch.treatyLength">Treaty length</span>
+                  <select name="treatyLength" data-option-source="treatyLength" data-default-value="any">
+                    <option value="any" data-i18n="replaySearch.any" selected>Any</option>
+                    <option value="0">0</option>
+                  </select>
+                </label>
+                <label class="search-field">
+                  <span data-i18n="replaySearch.victory">Victory</span>
+                  <select name="victory" data-option-source="victory" data-default-value="any">
+                    <option value="any" data-i18n="replaySearch.any" selected>Any</option>
+                    <option value="conquest">Conquest</option>
+                  </select>
+                </label>
+                <label class="search-field">
+                  <span data-i18n="replaySearch.revealMap">Reveal map</span>
+                  <select name="revealMap" data-option-source="revealMap" data-default-value="any">
+                    <option value="any" data-i18n="replaySearch.any" selected>Any</option>
+                    <option value="normal">Normal</option>
+                  </select>
+                </label>
+              </div>
+              <div class="replay-search-actions">
+                <button class="button secondary" type="reset" data-action="reset-search" data-i18n="replaySearch.reset">Reset</button>
+                <button class="button primary" type="submit" data-i18n="replaySearch.search">Search</button>
+              </div>
+            </form>
+            <section id="searchHistory" class="search-history" aria-labelledby="searchHistoryTitle" hidden>
+              <h3 id="searchHistoryTitle" data-i18n="replaySearch.searchHistory">Search history</h3>
+              <ol id="searchHistoryList" class="search-history-list" aria-label="Search history"></ol>
+            </section>
+          </section>
+        </div>
+      </section>
+
+      <aside class="database-notice" data-i18n-html="site.databaseNoticeHtml">Download the <a href="https://aoe2viewer.com/app/">AOE2 viewer app</a> to enjoy the <a href="https://aoe2viewer.com/app/#load-recent-replays-instantly">one-click replay launch</a> and the <a href="https://aoe2viewer.com/app/#aoe2-spy">AOE2 spy</a> feature that shows your opponent's strategies in live games!</aside>
+
+      <section class="replay-results-band" aria-live="polite">
+        <div class="replay-results-heading">
+          <h2 id="replayResultsTitle" data-i18n="replaySearch.recentHighlights">Recent highlights</h2>
+          <p id="replayResultsMeta" class="results-meta" data-i18n="replaySearch.searching">Searching recorded games...</p>
+        </div>
+        <div id="replayResults" class="replay-results empty-state">
+          <p><span class="spinner" aria-hidden="true"></span> <span data-i18n="replaySearch.searching">Searching recorded games...</span></p>
+        </div>
+        <div id="replayPagination" class="pagination replay-pagination" hidden></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <section class="footer-block" aria-labelledby="footerCommunityTitle">
+          <p class="footer-title" id="footerCommunityTitle" data-i18n="footer.community">Community</p>
+          <div class="footer-links">
+            <a href="https://discord.gg/YjW9tz4tty" target="_blank" rel="noreferrer" data-i18n="footer.discord">Discord</a>
+            <a href="https://github.com/dallascao/aoe2-game-viewer" target="_blank" rel="noreferrer" data-i18n="footer.github">GitHub</a>
+          </div>
+        </section>
+
+        <section class="footer-block" aria-labelledby="footerSourcesTitle">
+          <p class="footer-title" id="footerSourcesTitle" data-i18n="footer.sources">Data sources</p>
+          <div class="footer-links">
+            <a href="https://www.ageofempires.com/stats/ageii/" target="_blank" rel="noreferrer" data-i18n="footer.ageStats">Age of Empires stats</a>
+            <a href="https://aoe2recs.com/" target="_blank" rel="noreferrer" data-i18n="footer.aoe2recs">aoe2recs live feed</a>
+            <a href="https://www.aoe2companion.com/" target="_blank" rel="noreferrer" data-i18n="footer.aoe2Companion">AOE2 Companion</a>
+            <a href="https://aoe-elo.com/" target="_blank" rel="noreferrer" data-i18n="footer.aoeElo">AOE Elo ratings</a>
+            <a href="https://liquipedia.net/ageofempires/Main_Page" target="_blank" rel="noreferrer" data-i18n="footer.liquipedia">Liquipedia Age of Empires</a>
+          </div>
+        </section>
+      </div>
+      <div class="footer-meta">
+        <a class="footer-legal-link" href="/privacy.html" data-i18n="footer.privacy">Privacy policy</a>
+        <nav class="footer-language-links" aria-label="Language" data-language-crawl-links>
+          <a href="/" hreflang="en" lang="en">English</a>
+          <a href="/?lang=pt" hreflang="pt" lang="pt">Português</a>
+          <a href="/?lang=de" hreflang="de" lang="de">Deutsch</a>
+          <a href="/?lang=es" hreflang="es" lang="es">Español</a>
+          <a href="/?lang=fr" hreflang="fr" lang="fr">Français</a>
+          <a href="/?lang=hi" hreflang="hi" lang="hi">हिन्दी</a>
+          <a href="/?lang=it" hreflang="it" lang="it">Italiano</a>
+          <a href="/?lang=ja" hreflang="ja" lang="ja">日本語</a>
+          <a href="/?lang=ko" hreflang="ko" lang="ko">한국어</a>
+          <a href="/?lang=ms" hreflang="ms" lang="ms">Bahasa Melayu</a>
+          <a href="/?lang=ru" hreflang="ru" lang="ru">Русский</a>
+          <a href="/?lang=tr" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/?lang=zh-Hant" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+          <a href="/?lang=vi" hreflang="vi" lang="vi">Tiếng Việt</a>
+          <a href="/?lang=zh-Hans" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+          <a href="/?lang=pl" hreflang="pl" lang="pl">Polski</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

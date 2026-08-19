@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJL5Q8MERR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-YJL5Q8MERR');
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101214" />
+    <meta
+      name="description"
+      content="Follow replays of your favorite players, civilizations, and maps. One-click launch of any replays. Watch live games. Display opponent's elo and strategies in recent games. All in one app."
+    />
+    <link rel="canonical" href="https://aoe2viewer.com/app/" />
+    <link rel="alternate" hreflang="en" href="https://aoe2viewer.com/app/" />
+    <link rel="alternate" hreflang="pt" href="https://aoe2viewer.com/app/?lang=pt" />
+    <link rel="alternate" hreflang="de" href="https://aoe2viewer.com/app/?lang=de" />
+    <link rel="alternate" hreflang="es" href="https://aoe2viewer.com/app/?lang=es" />
+    <link rel="alternate" hreflang="fr" href="https://aoe2viewer.com/app/?lang=fr" />
+    <link rel="alternate" hreflang="hi" href="https://aoe2viewer.com/app/?lang=hi" />
+    <link rel="alternate" hreflang="it" href="https://aoe2viewer.com/app/?lang=it" />
+    <link rel="alternate" hreflang="ja" href="https://aoe2viewer.com/app/?lang=ja" />
+    <link rel="alternate" hreflang="ko" href="https://aoe2viewer.com/app/?lang=ko" />
+    <link rel="alternate" hreflang="ms" href="https://aoe2viewer.com/app/?lang=ms" />
+    <link rel="alternate" hreflang="ru" href="https://aoe2viewer.com/app/?lang=ru" />
+    <link rel="alternate" hreflang="tr" href="https://aoe2viewer.com/app/?lang=tr" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://aoe2viewer.com/app/?lang=zh-Hant" />
+    <link rel="alternate" hreflang="vi" href="https://aoe2viewer.com/app/?lang=vi" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://aoe2viewer.com/app/?lang=zh-Hans" />
+    <link rel="alternate" hreflang="pl" href="https://aoe2viewer.com/app/?lang=pl" />
+    <link rel="alternate" hreflang="x-default" href="https://aoe2viewer.com/app/" />
+    <meta property="og:title" content="AOE2 game viewer" />
+    <meta
+      property="og:description"
+      content="Follow replays of your favorite players, civilizations, and maps. One-click launch of any replays. Watch live games. Display opponent's elo and strategies in recent games. All in one app."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aoe2viewer.com" />
+    <meta property="og:image" content="https://aoe2viewer.com/images/aoe2_game_viewer_screenshot_2.png" />
+    <title>AOE2 game viewer</title>
+    <link rel="icon" href="/icons/app-icon.ico" sizes="any" />
+    <link rel="icon" href="/icons/app-icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icons/app-icon-256.png" />
+    <link rel="preload" href="/styles.css" as="style" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script defer src="/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skipLink">Skip to content</a>
+
+    <header class="site-header" aria-label="AOE2 game viewer">
+      <a class="brand" href="/app/" aria-label="AOE2 game viewer">
+        <img class="brand-mark" src="/icons/app-icon-64.png" alt="" aria-hidden="true" />
+        <span data-i18n="brand">AOE2 game viewer</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="/" data-i18n="nav.replaySearch">Replay search</a>
+        <a href="/players/" data-i18n="nav.players">Players</a>
+        <a href="/civilizations/" data-i18n="nav.civilizations">Civilizations</a>
+        <a href="/maps/" data-i18n="nav.maps">Maps</a>
+        <a href="/strategies/" data-i18n="nav.strategies">Strategies</a>
+        <a href="/followups/" data-i18n="nav.followups">Followups</a>
+        <a href="/app/" data-i18n="nav.app" aria-current="page">App</a>
+      </nav>
+      <label class="language-control">
+        <span data-i18n="language.label">Language</span>
+        <select id="languageSelect" aria-label="Language"></select>
+      </label>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-media" aria-label="AOE2 game viewer screenshot">
+          <img
+            id="heroScreenshot"
+            src="/images/aoe2_game_viewer_screenshot_0.png"
+            alt="AOE2 game viewer live spectating screen"
+            data-i18n-attr="alt:hero.imageAlt"
+          />
+        </div>
+        <div class="hero-copy">
+          <h1 data-i18n="hero.title">AOE2 Game Viewer and AOE2 Spy</h1>
+          <p class="hero-lede" data-i18n="hero.lede">
+            Follow replays of your favorite players, civilizations, and maps. One-click launch of any replays. Watch live games. Display opponent's elo and strategies in recent games. All in one app.
+          </p>
+          <div class="hero-actions" id="download">
+            <a
+              class="button primary"
+              href="https://downloads.aoe2viewer.com/releases/AOE2-game-viewer-x64-Setup.exe"
+              data-i18n="hero.download"
+            >
+              Download for Windows
+            </a>
+            <a class="button secondary" href="#features" data-i18n="hero.seeFeatures">See what it does</a>
+            <a class="button secondary" href="/updates/" data-i18n="hero.updates">Updates</a>
+          </div>
+          <dl class="release-facts" aria-label="Release details">
+            <div>
+              <dt data-i18n="facts.versionLabel">Version</dt>
+              <dd>2.7.4</dd>
+            </div>
+            <div>
+              <dt data-i18n="facts.platformLabel">Platform</dt>
+              <dd data-i18n="facts.platformValue">Windows</dd>
+            </div>
+            <div>
+              <dt data-i18n="facts.gameLabel">Game</dt>
+              <dd data-i18n="facts.gameValue">Age of Empires II: DE</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <aside class="database-notice" data-i18n-html="site.databaseNoticeHtml">Download the <a href="https://aoe2viewer.com/app/">AOE2 viewer app</a> to enjoy the <a href="https://aoe2viewer.com/app/#load-recent-replays-instantly">one-click replay launch</a> and the <a href="https://aoe2viewer.com/app/#aoe2-spy">AOE2 spy</a> feature that shows your opponent's strategies in live games!</aside>
+
+      <section class="feature-band" id="features">        
+
+        <div class="feature-row" id="load-recent-replays-instantly">
+          <div class="feature-copy">
+            <span class="feature-number">01</span>
+            <h3 data-i18n="features.replay.title">Load recent replays instantly</h3>
+            <p data-i18n="features.replay.body">
+              Replay any player's recent games, including your own, with one click from a clear match history list. No searching, downloading, unzipping, copying, or guessing which recorded-game file to open.
+            </p>
+          </div>
+            <figure class="screenshot-frame">
+            <img
+              id="replayScreenshot"
+              src="/images/localized/en/aoe2_game_viewer_screenshot_1.png"
+              alt="Recent matches replay list with one-click play buttons"
+              data-i18n-attr="alt:features.replay.alt"
+            />
+          </figure>
+        </div>
+
+        <div class="feature-row reverse">
+          <div class="feature-copy">
+            <span class="feature-number">02</span>
+            <h3 data-i18n="features.live.title">Spectate live games and find casters</h3>
+            <p data-i18n="features.live.body">
+              See when a followed player is in game, launch the live spectate link, or open live caster streams already covering the match.
+            </p>
+          </div>
+          <figure class="screenshot-frame">
+            <img
+              id="liveScreenshot"
+              src="/images/localized/en/aoe2_game_viewer_screenshot_2.png"
+              alt="Live match status and caster streams"
+              data-i18n-attr="alt:features.live.alt"
+            />
+          </figure>
+        </div>
+
+        <div class="feature-row">
+          <div class="feature-copy">
+            <span class="feature-number">03</span>
+            <h3 data-i18n="features.overlay.title">Synced event overlay</h3>
+            <p data-i18n="features.overlay.body">
+              See key build, economy, and age-up events synced over the game view.
+            </p>
+          </div>
+          <figure class="screenshot-frame">
+            <img
+              id="overlayScreenshot"
+              src="/images/aoe2_game_viewer_screenshot_3.png"
+              alt="Synced event overlay on an AOE2 match"
+              data-i18n-attr="alt:features.overlay.alt"
+            />
+          </figure>
+        </div>
+
+        <div class="feature-row reverse" id="aoe2-spy">
+          <div class="feature-copy">
+            <span class="feature-number">04</span>
+            <h3 data-i18n="features.spy.title">AOE2 Spy</h3>
+            <p data-i18n="features.spy.body">
+              Display opponent's ELO and past strategies using the same civ and on the same map at the start of a live game.
+            </p>
+          </div>
+          <figure class="screenshot-frame">
+            <img
+              id="spyScreenshot"
+              src="/images/aoe2_game_viewer_screenshot_5.png"
+              alt="AOE2 Spy overlay showing opponent ELO and recent strategies"
+              data-i18n-attr="alt:features.spy.alt"
+            />
+          </figure>
+        </div>
+
+        <div class="feature-row">
+          <div class="feature-copy">
+            <span class="feature-number">05</span>
+            <h3 data-i18n="features.pastePlay.title">Paste 'n Play!</h3>
+            <p data-i18n="features.pastePlay.body">
+              Paste a shared game link and launch the replay without digging through files.
+            </p>
+          </div>
+          <figure class="screenshot-frame">
+            <img
+              id="pastePlayScreenshot"
+              src="/images/aoe2_game_viewer_screenshot_4.png"
+              alt="Paste 'n Play shared game launcher"
+              data-i18n-attr="alt:features.pastePlay.alt"
+            />
+          </figure>
+        </div>
+
+      </section>
+
+      <section class="sponsor-band" id="sponsors">
+        <div class="section-heading">
+          <h2 data-i18n="sponsors.title">AOE2 game viewer is free with no feature limit, but your support will help me stay motivated to keep working on it. Thank you to the following supporters!</h2>
+        </div>
+        <div class="sponsor-panel">
+          <ul class="sponsor-list" id="sponsorList" aria-live="polite">
+            <li data-i18n="sponsors.loading">Loading sponsors...</li>
+          </ul>
+          <p class="sponsor-note" data-i18n="sponsors.note">
+            Sponsors are listed only when they opt in from the app.
+          </p>
+        </div>
+      </section>
+
+      <section class="download-band">
+        <div>
+          <h2 data-i18n="final.title">Download now!</h2>
+        </div>
+        <a
+          class="button primary"
+          href="https://downloads.aoe2viewer.com/releases/AOE2-game-viewer-x64-Setup.exe"
+          data-i18n="final.download"
+        >
+          Download installer
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <section class="footer-block" aria-labelledby="footerCommunityTitle">
+          <p class="footer-title" id="footerCommunityTitle" data-i18n="footer.community">Community</p>
+          <div class="footer-links">
+            <a href="https://discord.gg/YjW9tz4tty" target="_blank" rel="noreferrer" data-i18n="footer.discord">Discord</a>
+            <a href="https://github.com/dallascao/aoe2-game-viewer" target="_blank" rel="noreferrer" data-i18n="footer.github">GitHub</a>
+          </div>
+        </section>
+
+        <section class="footer-block" aria-labelledby="footerSourcesTitle">
+          <p class="footer-title" id="footerSourcesTitle" data-i18n="footer.sources">Data sources</p>
+          <div class="footer-links">
+            <a href="https://www.ageofempires.com/stats/ageii/" target="_blank" rel="noreferrer" data-i18n="footer.ageStats">Age of Empires stats</a>
+            <a href="https://aoe2recs.com/" target="_blank" rel="noreferrer" data-i18n="footer.aoe2recs">aoe2recs live feed</a>
+            <a href="https://www.aoe2companion.com/" target="_blank" rel="noreferrer" data-i18n="footer.aoe2Companion">AOE2 Companion</a>
+            <a href="https://aoe-elo.com/" target="_blank" rel="noreferrer" data-i18n="footer.aoeElo">AOE Elo ratings</a>
+            <a href="https://liquipedia.net/ageofempires/Main_Page" target="_blank" rel="noreferrer" data-i18n="footer.liquipedia">Liquipedia Age of Empires</a>
+          </div>
+        </section>
+      </div>
+      <div class="footer-meta">
+        <a class="footer-legal-link" href="/privacy.html" data-i18n="footer.privacy">Privacy policy</a>
+        <nav class="footer-language-links" aria-label="Language" data-language-crawl-links>
+          <a href="/app/" hreflang="en" lang="en">English</a>
+          <a href="/app/?lang=pt" hreflang="pt" lang="pt">Português</a>
+          <a href="/app/?lang=de" hreflang="de" lang="de">Deutsch</a>
+          <a href="/app/?lang=es" hreflang="es" lang="es">Español</a>
+          <a href="/app/?lang=fr" hreflang="fr" lang="fr">Français</a>
+          <a href="/app/?lang=hi" hreflang="hi" lang="hi">हिन्दी</a>
+          <a href="/app/?lang=it" hreflang="it" lang="it">Italiano</a>
+          <a href="/app/?lang=ja" hreflang="ja" lang="ja">日本語</a>
+          <a href="/app/?lang=ko" hreflang="ko" lang="ko">한국어</a>
+          <a href="/app/?lang=ms" hreflang="ms" lang="ms">Bahasa Melayu</a>
+          <a href="/app/?lang=ru" hreflang="ru" lang="ru">Русский</a>
+          <a href="/app/?lang=tr" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/app/?lang=zh-Hant" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+          <a href="/app/?lang=vi" hreflang="vi" lang="vi">Tiếng Việt</a>
+          <a href="/app/?lang=zh-Hans" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+          <a href="/app/?lang=pl" hreflang="pl" lang="pl">Polski</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
