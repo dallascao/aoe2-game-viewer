@@ -1,0 +1,323 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "AOE2 Viewer Public Replay Search API",
+    "version": "1.0.0",
+    "description": "Public unauthenticated API for searching Age of Empires II: Definitive Edition recorded matches and replay metadata."
+  },
+  "servers": [
+    {
+      "url": "https://aoe2viewer.com",
+      "description": "Production"
+    }
+  ],
+  "paths": {
+    "/api/replay-search": {
+      "get": {
+        "summary": "Search replay matches using query parameters",
+        "operationId": "searchReplaysGet",
+        "parameters": [
+          { "name": "player", "in": "query", "schema": { "type": "string" }, "description": "Player name search for player A." },
+          { "name": "profileId", "in": "query", "schema": { "type": "integer" }, "description": "Exact profile ID for player A." },
+          { "name": "player2", "in": "query", "schema": { "type": "string" }, "description": "Player name search for player B." },
+          { "name": "profileId2", "in": "query", "schema": { "type": "integer" }, "description": "Exact profile ID for player B." },
+          { "name": "civ", "in": "query", "schema": { "type": "string" }, "description": "Civilization identifier for player/team A." },
+          { "name": "civ2", "in": "query", "schema": { "type": "string" }, "description": "Civilization identifier for player/team B." },
+          { "name": "map", "in": "query", "schema": { "type": "string" } },
+          { "name": "leaderboard", "in": "query", "schema": { "type": "string" } },
+          { "name": "gameMode", "in": "query", "schema": { "type": "string" } },
+          { "name": "strategy", "in": "query", "schema": { "type": "string" } },
+          { "name": "followup", "in": "query", "schema": { "type": "string" } },
+          { "name": "ratingRange", "in": "query", "schema": { "type": "string", "default": "1700-4000" } }
+        ],
+        "responses": {
+          "200": {
+            "description": "Replay search results",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ReplaySearchResponse" }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Search replay matches",
+        "operationId": "searchReplays",
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/ReplaySearchRequest" },
+              "examples": {
+                "heraArabia": {
+                  "summary": "Find Hera Arabia games",
+                  "value": {
+                    "criteria": {
+                      "players": [{ "input": "Hera" }],
+                      "ratingRange": "0-4000",
+                      "map": "rm_arabia"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Replay search results",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ReplaySearchResponse" }
+              }
+            }
+          },
+          "502": {
+            "description": "Replay search upstream unavailable",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ErrorResponse" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/replay-search/options": {
+      "get": {
+        "summary": "Get replay search filter values",
+        "operationId": "getReplaySearchOptions",
+        "responses": {
+          "200": {
+            "description": "Filter values, defaults, civilizations, and top player suggestions",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ReplaySearchOptionsResponse" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/replay-search/detect-strategy": {
+      "post": {
+        "summary": "Detect opening strategy and followup for a match",
+        "operationId": "detectReplayStrategy",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["matchId"],
+                "properties": {
+                  "matchId": { "type": "integer", "minimum": 1 }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Detected strategy and followup labels",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/StrategyDetectionResponse" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/player-rank": {
+      "get": {
+        "summary": "Look up player rank",
+        "operationId": "getPlayerRank",
+        "parameters": [
+          {
+            "name": "profileId",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "integer", "minimum": 1 }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Player rank lookup result",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/PlayerRankResponse" }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ReplaySearchRequest": {
+        "type": "object",
+        "properties": {
+          "criteria": { "$ref": "#/components/schemas/ReplaySearchCriteria" }
+        },
+        "additionalProperties": true
+      },
+      "ReplaySearchCriteria": {
+        "type": "object",
+        "properties": {
+          "ratingRange": { "type": "string", "examples": ["1700-4000", "0-4000"] },
+          "players": {
+            "type": "array",
+            "maxItems": 2,
+            "items": { "$ref": "#/components/schemas/PlayerCriterion" }
+          },
+          "civs": {
+            "type": "array",
+            "maxItems": 2,
+            "items": { "type": "string" }
+          },
+          "map": { "type": "string" },
+          "leaderboard": { "type": "string" },
+          "gameMode": { "type": "string" },
+          "strategy": { "type": "string" },
+          "followup": { "type": "string" },
+          "aiPlayer": { "type": "string", "enum": ["0", "1", "any"] },
+          "difficulty": { "type": "string" },
+          "startingAge": { "type": "string" },
+          "endingAge": { "type": "string" },
+          "population": { "type": "string" },
+          "resources": { "type": "string" },
+          "victory": { "type": "string" },
+          "revealMap": { "type": "string" }
+        },
+        "additionalProperties": true
+      },
+      "PlayerCriterion": {
+        "type": "object",
+        "properties": {
+          "input": { "type": "string", "description": "Player name or fuzzy search input." },
+          "profileId": { "type": "integer", "minimum": 1, "description": "Exact Age of Empires profile ID." }
+        },
+        "additionalProperties": false
+      },
+      "ReplaySearchResponse": {
+        "type": "object",
+        "required": ["status", "data"],
+        "properties": {
+          "status": { "const": "OK" },
+          "data": {
+            "type": "object",
+            "required": ["criteria", "query", "total", "limit", "matches"],
+            "properties": {
+              "criteria": { "$ref": "#/components/schemas/ReplaySearchCriteria" },
+              "query": { "type": "object", "additionalProperties": true },
+              "total": { "type": "integer", "minimum": 0 },
+              "limit": { "type": "integer", "minimum": 1 },
+              "matches": {
+                "type": "array",
+                "items": { "$ref": "#/components/schemas/Match" }
+              }
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "Match": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer" },
+          "selectedProfileId": { "type": ["integer", "null"] },
+          "startTime": { "type": "integer", "description": "Unix timestamp in seconds when available." },
+          "completionTime": { "type": "number", "description": "Match duration in seconds when available." },
+          "map": { "type": "string" },
+          "highestRating": { "type": ["integer", "null"] },
+          "leaderboard": { "type": "string" },
+          "gameMode": { "type": "string" },
+          "playersA": { "type": "array", "items": { "type": "string" } },
+          "playersB": { "type": "array", "items": { "type": "string" } },
+          "civsA": { "type": "array", "items": { "type": "string" } },
+          "civsB": { "type": "array", "items": { "type": "string" } },
+          "members": { "type": "array", "items": { "$ref": "#/components/schemas/MatchMember" } },
+          "playerAStrategy": { "type": "string" },
+          "playerBStrategy": { "type": "string" },
+          "playerAFollowup": { "type": "string" },
+          "playerBFollowup": { "type": "string" },
+          "winnerSide": { "type": "string" },
+          "replayUrl": { "type": "string" },
+          "downloadUrl": { "type": "string" },
+          "instantPlayUrl": { "type": "string" },
+          "shareUrl": { "type": "string" },
+          "source": { "type": "string" }
+        },
+        "additionalProperties": true
+      },
+      "MatchMember": {
+        "type": "object",
+        "properties": {
+          "profileId": { "type": "integer" },
+          "name": { "type": "string" },
+          "civ": { "type": "string" },
+          "teamId": { "type": ["integer", "null"] },
+          "outcome": { "type": "string" },
+          "rating": { "type": ["integer", "null"] },
+          "country": { "type": "string" }
+        },
+        "additionalProperties": true
+      },
+      "ReplaySearchOptionsResponse": {
+        "type": "object",
+        "properties": {
+          "status": { "const": "OK" },
+          "data": {
+            "type": "object",
+            "properties": {
+              "ratingRanges": { "type": "array", "items": { "type": "string" } },
+              "defaults": { "type": "object", "additionalProperties": true },
+              "civilizations": { "type": "array", "items": { "type": "object", "additionalProperties": true } },
+              "treatyLengths": { "type": "array", "items": { "type": "integer" } },
+              "values": { "type": "object", "additionalProperties": { "type": "array" } },
+              "players": { "type": "array", "items": { "type": "object", "additionalProperties": true } }
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "StrategyDetectionResponse": {
+        "type": "object",
+        "properties": {
+          "status": { "const": "OK" },
+          "data": {
+            "type": "object",
+            "properties": {
+              "matchId": { "type": "integer" },
+              "status": { "type": "string" },
+              "playerAStrategy": { "type": "string" },
+              "playerBStrategy": { "type": "string" },
+              "playerAFollowup": { "type": "string" },
+              "playerBFollowup": { "type": "string" }
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "PlayerRankResponse": {
+        "type": "object",
+        "properties": {
+          "status": { "type": "string" },
+          "data": { "type": "object", "additionalProperties": true }
+        },
+        "additionalProperties": true
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "status": { "const": "ERROR" },
+          "errorMessage": { "type": "string" }
+        }
+      }
+    }
+  },
+  "security": []
+}
