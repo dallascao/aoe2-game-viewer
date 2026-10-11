@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "search-aoe2-replays",
+      "type": "skill-md",
+      "description": "Search Age of Empires II: Definitive Edition match records using the AOE2 Viewer public replay search API.",
+      "url": "https://aoe2viewer.com/.well-known/agent-skills/replay-search/SKILL.md",
+      "digest": "sha256:78c4d0f010ff828bc28f5d8a519a1d0acadd1fadc67ce32af518a8be0047f4d5"
+    }
+  ]
+}

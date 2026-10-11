@@ -1,0 +1,56 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+/
+  Link: </.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json", </docs/api.md>; rel="service-doc"; type="text/markdown", </openapi.json>; rel="service-desc"; type="application/vnd.oai.openapi+json", </api/replay-search/options>; rel="status"; type="application/json", </auth.md>; rel="service-doc"; type="text/markdown", </.well-known/oauth-protected-resource>; rel="oauth-protected-resource"; type="application/json", </.well-known/agent-skills/index.json>; rel="service-desc"; type="application/json"
+
+/index.html
+  Link: </.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json", </docs/api.md>; rel="service-doc"; type="text/markdown", </openapi.json>; rel="service-desc"; type="application/vnd.oai.openapi+json", </api/replay-search/options>; rel="status"; type="application/json", </auth.md>; rel="service-doc"; type="text/markdown", </.well-known/oauth-protected-resource>; rel="oauth-protected-resource"; type="application/json", </.well-known/agent-skills/index.json>; rel="service-desc"; type="application/json"
+
+/.well-known/api-catalog
+  Content-Type: application/linkset+json; profile="https://www.rfc-editor.org/info/rfc9727"; charset=UTF-8
+  Cache-Control: public, max-age=3600
+  Link: </.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json"
+
+/openapi.json
+  Content-Type: application/vnd.oai.openapi+json; charset=UTF-8
+  Cache-Control: public, max-age=3600
+
+/docs/api.md
+  Content-Type: text/markdown; charset=UTF-8
+  Cache-Control: public, max-age=3600
+
+/auth.md
+  Content-Type: text/markdown; charset=UTF-8
+  Cache-Control: public, max-age=3600
+
+/.well-known/oauth-protected-resource
+  Content-Type: application/json; charset=UTF-8
+  Cache-Control: public, max-age=3600
+
+/.well-known/agent-skills/index.json
+  Content-Type: application/json; charset=UTF-8
+  Cache-Control: public, max-age=3600
+
+/.well-known/agent-skills/replay-search/SKILL.md
+  Content-Type: text/markdown; charset=UTF-8
+  Cache-Control: public, max-age=3600
+
+/locales/*
+  Cache-Control: public, max-age=300
+
+/app.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+/images/*
+  Cache-Control: public, max-age=604800
+
+/sitemap.xml
+  Content-Type: application/xml; charset=UTF-8
+  Cache-Control: public, max-age=3600
+
+/robots.txt
+  Content-Type: text/plain; charset=UTF-8
+  Cache-Control: public, max-age=3600
